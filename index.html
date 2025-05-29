@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Russian Roulette</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Trailer Screen -->
+    <div id="trailer-screen">
+        <img src="input_images/trailer.webp" alt="Trailer">
+    </div>
+
+    <div id="game-container" class="hidden">
+        <!-- Intro Screen -->
+        <div id="intro-screen">
+            <h1>Russian Roulette</h1>
+            <div class="game-options">
+                <button id="play-friends">Play with Friend</button>
+                <button id="play-computer">Play with Computer</button>
+            </div>
+        </div>
+
+        <!-- Player Setup Screen -->
+        <div id="setup-screen" class="hidden">
+            <h2>Player Setup</h2>
+            <div id="player-names-container">
+                <div class="player-name-input">
+                    <label for="player-1">Player 1:</label>
+                    <input type="text" id="player-1" placeholder="Your Name">
+                </div>
+                <div class="player-name-input">
+                    <label for="player-2">Player 2:</label>
+                    <input type="text" id="player-2" placeholder="Friend's Name">
+                </div>
+            </div>
+            <button id="start-game">Start Game</button>
+        </div>
+
+        <!-- Game Screen -->
+        <div id="game-screen" class="hidden">
+            <div id="game-info">
+                <h2 id="current-player">Player's Turn</h2>
+            </div>
+            
+            <!-- Revolver Images -->
+            <div id="revolver-container">
+                <div id="revolver-spin" class="hidden">
+                    <img src="input_images/revolverrbg.png" alt="Revolver">
+                    <button id="spin-button">Spin</button>
+                    <button id="stop-spin" class="hidden">Stop Spinning</button>
+                </div>
+                
+                <div id="gun-facing-computer" class="hidden">
+                <img src="input_images/Adobe Express - file.png" alt="Gun Facing Left Player/Computer">
+                </div>
+
+                <div id="gun-facing-human" class="hidden">
+                    <img src="input_images/Adobe Express2 - file.png" alt="Gun Facing Right Player">
+                </div>
+   
+                <div id="gun-shot-computer" class="hidden fullscreen-overlay">
+                    <img src="input_images/shoot1.webp" alt="Computer Shot">
+                </div>
+
+                <div id="gun-shot-human" class="hidden fullscreen-overlay">
+                    <img src="input_images/shoot2.png"alt="Human Shot">
+                </div>
+                
+                <button id="trigger-button" class="hidden">Pull Trigger</button>
+            </div>
+            
+            <div id="result-message"></div>
+        </div>
+
+        <!-- Game Over Screen -->
+        <div id="game-over" class="hidden">
+            <h2>Game Over</h2>
+            <p id="winner-text"></p>
+            <div class="game-end-options">
+                <button id="play-again">Play Again</button>
+                <button id="exit-game">Exit</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Exit Screen -->
+    <div id="exit-screen" class="hidden">
+        <img src="input_images/trailer.webp" alt="Exit">
+    </div>
+
+    <!-- Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    
+    <!-- Game Scripts -->
+    <script src="js/game.js"></script>
+</body>
+</html>
