@@ -2,6 +2,8 @@
 
 The Russian Roulette game is built using the following core web technologies:
 
+### Live link: https://rush-roulette.netlify.app/
+
 ## Frontend Technologies
 
 ### 1. HTML5
